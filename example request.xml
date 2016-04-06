@@ -1,0 +1,11 @@
+<xml>
+	<fnplm:alerts xmlns:fnplm="urn:fnplm:lmadmin">
+		<fnplm:alert description="The exstream vendor daemon has stopped. Either an Administrator might have shut this down purposely or an error might have occurred. For more information, please see the exstream log file." 
+		id="00052fa1bf92c3a00000" 
+		level="CRITICAL" 
+		timestamp="Sun Apr 03 23:10:33 2016" 
+		title="Vendor daemon down: exstream" 
+		type="VENDOR_DAEMON_DOWN" 
+		vendor="exstream"/>
+	</fnplm:alerts>
+</xml>

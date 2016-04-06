@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSDL:definitions xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:fnplm:lmadmin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:lmadmin="urn:fnplm:lmadmin" name="LicenseServer" targetNamespace="urn:fnplm:lmadmin" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/">
+  <WSDL:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:fnplm:lmadmin">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+    </xsd:schema>
+  </WSDL:types>
+  <WSDL:message name="getAlertsRequest">
+    <WSDL:part name="sessionid" type="xsd:string" />
+    <WSDL:part name="filter" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="getAlertsResponse">
+    <WSDL:part name="output" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="getSessionIdRequest">
+    <WSDL:part name="username" type="xsd:string" />
+    <WSDL:part name="password" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="getSessionIdResponse">
+    <WSDL:part name="output" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:portType name="LicenseServerPortType">
+    <WSDL:operation name="getAlerts">
+      <documentation>Service definition of function lmadmin__getAlerts</documentation>
+      <WSDL:input message="lmadmin:getAlertsRequest" />
+      <WSDL:output message="lmadmin:getAlertsResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="getSessionId">
+      <documentation>Service definition of function lmadmin__getSessionId</documentation>
+      <WSDL:input message="lmadmin:getSessionIdRequest" />
+      <WSDL:output message="lmadmin:getSessionIdResponse" />
+    </WSDL:operation>
+  </WSDL:portType>
+  <WSDL:binding name="LicenseServer" type="lmadmin:LicenseServerPortType">
+    <SOAP:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <WSDL:operation name="getAlerts">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="getSessionId">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+  </WSDL:binding>
+  <WSDL:service name="LicenseServer">
+    <documentation>gSOAP 2.7.9b generated service definition</documentation>
+    <WSDL:port name="LicenseServer" binding="lmadmin:LicenseServer">
+      <SOAP:address location="http://mydomain/path/adminengine.cgi" />
+    </WSDL:port>
+  </WSDL:service>
+</WSDL:definitions>

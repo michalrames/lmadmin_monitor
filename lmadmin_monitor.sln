@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lmadmin_monitor", "lmadmin_monitor\lmadmin_monitor.csproj", "{808540B6-2161-4A21-8288-AB871262B14A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LmadminMonitorSetup", "LmadminMonitorSetup\LmadminMonitorSetup.vdproj", "{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{808540B6-2161-4A21-8288-AB871262B14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{808540B6-2161-4A21-8288-AB871262B14A}.Release|x86.ActiveCfg = Release|Any CPU
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Debug|Any CPU.ActiveCfg = Debug
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Debug|Any CPU.Build.0 = Debug
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Debug|Mixed Platforms.Build.0 = Debug
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Debug|x86.ActiveCfg = Debug
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Debug|x86.Build.0 = Debug
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Release|Any CPU.ActiveCfg = Release
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Release|Any CPU.Build.0 = Release
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Release|Mixed Platforms.ActiveCfg = Release
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Release|Mixed Platforms.Build.0 = Release
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Release|x86.ActiveCfg = Release
+		{AD78686A-C5D6-4B7A-B73D-29B278E2FE0A}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

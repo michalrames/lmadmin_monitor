@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="LicenseServer"
+ targetNamespace="urn:fnplm:lmadmin"
+ xmlns:tns="urn:fnplm:lmadmin"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:lmadmin="urn:fnplm:lmadmin"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="urn:fnplm:lmadmin"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:lmadmin="urn:fnplm:lmadmin"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+ </schema>
+
+</types>
+
+<message name="getAlertsRequest">
+ <part name="sessionid" type="xsd:string"/>
+ <part name="filter" type="xsd:string"/>
+</message>
+
+<message name="getAlertsResponse">
+ <part name="output" type="xsd:string"/>
+</message>
+
+<message name="getSessionIdRequest">
+ <part name="username" type="xsd:string"/>
+ <part name="password" type="xsd:string"/>
+</message>
+
+<message name="getSessionIdResponse">
+ <part name="output" type="xsd:string"/>
+</message>
+
+<portType name="LicenseServerPortType">
+ <operation name="getAlerts">
+  <documentation>Service definition of function lmadmin__getAlerts</documentation>
+  <input message="tns:getAlertsRequest"/>
+  <output message="tns:getAlertsResponse"/>
+ </operation>
+ <operation name="getSessionId">
+  <documentation>Service definition of function lmadmin__getSessionId</documentation>
+  <input message="tns:getSessionIdRequest"/>
+  <output message="tns:getSessionIdResponse"/>
+ </operation>
+</portType>
+
+<binding name="LicenseServer" type="tns:LicenseServerPortType">
+ <SOAP:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="getAlerts">
+  <SOAP:operation style="rpc" soapAction=""/>
+  <input>
+     <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </input>
+  <output>
+     <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </output>
+ </operation>
+ <operation name="getSessionId">
+  <SOAP:operation style="rpc" soapAction=""/>
+  <input>
+     <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </input>
+  <output>
+     <SOAP:body use="encoded" namespace="urn:fnplm:lmadmin" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="LicenseServer">
+ <documentation>gSOAP 2.7.9b generated service definition</documentation>
+ <port name="LicenseServer" binding="tns:LicenseServer">
+  <SOAP:address location="http://mydomain/path/adminengine.cgi"/>
+ </port>
+</service>
+
+</definitions>
